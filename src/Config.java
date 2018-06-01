@@ -1,5 +1,3 @@
-import jdk.nashorn.internal.runtime.regexp.joni.Syntax;
-
 import java.util.ArrayList;
 
 class Config {

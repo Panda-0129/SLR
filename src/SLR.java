@@ -49,7 +49,7 @@ public class SLR {
     private static void readFromFile() throws IOException {
         int i = 0;
         String line;
-        String pathname = "test2.txt";
+        String pathname = "production.txt";
         File fp = new File(pathname);
         InputStreamReader reader = new InputStreamReader(new FileInputStream(fp));
         BufferedReader br = new BufferedReader(reader);

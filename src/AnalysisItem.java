@@ -1,5 +1,4 @@
-public class AnalysisItem {
-
+class AnalysisItem {
     int stateNum;
     String actionOrGoto;
     String content;
@@ -9,5 +8,4 @@ public class AnalysisItem {
         this.actionOrGoto = actionOrGoto;
         this.content = content;
     }
-
 }

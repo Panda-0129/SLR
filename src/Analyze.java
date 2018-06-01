@@ -66,36 +66,26 @@ class Analyze {
             index--;
         }
         stAnalysis.push("0");
-        System.out.println("Stack\t\t\t\t\t\tInput\t\t\t\t\t\tAction");
+        System.out.printf("%-32s%-32s%-32s","Stack","Input","Action");
     }
 
     private static void outputStack(String action) {
-        for (String aStProduction : stAnalysis) {
-            System.out.print(aStProduction);
+        StringBuilder tmpAna = new StringBuilder();
+        StringBuilder tmpIn = new StringBuilder();
+        for (String aStAnalysis : stAnalysis) {
+            tmpAna.append(aStAnalysis);
         }
 
-        outputTable(stAnalysis.size());
+        System.out.printf("%-32s", tmpAna);
 
         for (int i = stInputStr.size(); i > 0; i-- ) {
-            System.out.print(stInputStr.get(i - 1));
+            tmpIn.append(stInputStr.get(i - 1));
         }
 
-        outputTable(stInputStr.size());
+        System.out.printf("%-32s", tmpIn);
 
         System.out.print(action);
         System.out.println();
     }
 
-    private static void outputTable (int size) {
-        if (size < 4)
-            System.out.print("\t\t\t\t\t\t\t");
-        else if (size < 8)
-            System.out.print("\t\t\t\t\t\t");
-        else if (size < 11)
-            System.out.print("\t\t\t\t\t");
-        else if (size == 11)
-            System.out.print("\t\t\t\t");
-        else if (size < 16)
-            System.out.print("\t\t\t");
-    }
 }
